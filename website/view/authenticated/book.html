@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Payment - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/smoothproducts.css">
+</head>
+
+<body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyA72hmmNga4xOEC3V1LJ4bbOwNsoJ97cuI",
+            authDomain: "book2audio-be677.firebaseapp.com",
+            databaseURL: "https://book2audio-be677.firebaseio.com/",
+            projectId: "book2audio-be677",
+            storageBucket: "book2audio-be677.appspot.com",
+            messagingSenderId: "74814148576",
+            appId: "1:74814148576:web:0ac07bc85fad2b598de585",
+            measurementId: "G-8RH3T8WTND"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        var auth = firebase.auth();
+    </script>
+
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="dashboard.html">Next Gen Text</a><button
+                data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle
+                    navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto"></ul>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">DASHBOARD</a></li>
+                    <li class="nav-item"><a id="logout_button" class="nav-link" href="#">logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page payment-page">
+        <section class="clean-block payment-form dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info" id="book_name">
+                        <!-- populate with jquery -->
+                    </h2>
+                </div>
+                <form>
+                    <div class="text-center products"><img src="assets/img/tech/image2.jpg"></div>
+                    <div class="card-details">
+                        <div id="audio_container" class="text-center">
+                            <!-- populate by jquery -->
+                        </div>
+                        <select class="form-control">
+                            <optgroup label="Chapters" id="chapter_options">
+                                <!-- populate by jquery -->
+                            </optgroup>
+                        </select>
+                        <div class="form-row">
+                            <div class="col-sm-12 text-center">
+                                <div class="form-group">
+                                    <button id="select_audio_button" class="btn btn-primary btn-block"
+                                        data-bs-hover-animate="pulse">
+                                        Select Audio
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="assets/js/smoothproducts.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="/control/auth.js"></script>
+    <script src="/control/load.js"></script>
+    <script src="/control/getAudio.js"></script>
+</body>
+
+</html>
