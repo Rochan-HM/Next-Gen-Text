@@ -132,7 +132,7 @@ def process_doc(filename: str, audio_name: str) -> None:
     add_files_to_database(doc, filename)
 
     doc.close()
-    rm()
+    rm(filename)
 
 
 if __name__ == '__main__':
