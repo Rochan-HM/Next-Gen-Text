@@ -8,6 +8,8 @@ services:
       - PORT=5001
     ports:
     - 5001:5001
+    volumes:
+    - ./app:/app
   website:
     image: danjellz/http-server
     ports:

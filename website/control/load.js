@@ -1,6 +1,6 @@
 $(document).ready(function () {
     l = location.pathname;
-    const server = "http://localhost:5001/";
+    const server = "http://159.65.223.140:5001/";
     path = l.split("/").slice(-1)[0];
 
     if (path === "dashboard.html") {

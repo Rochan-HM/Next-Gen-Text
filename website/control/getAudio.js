@@ -2,7 +2,7 @@ $("#select_audio_button").on("click", function (e) {
     e.preventDefault();
     var userID = localStorage.getItem("userid");
     url = decodeURIComponent(location);
-    const server = "http://localhost:5001/";
+    const server = "http://159.65.223.140:5001/";
     bookname = url.split("=").slice(-1)[0];
     var number = $("#chapter_options :selected")
         .text()

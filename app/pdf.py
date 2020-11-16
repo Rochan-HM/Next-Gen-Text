@@ -105,6 +105,7 @@ def save_audio(voice_name: str):
 
 
 def process_doc(filename: str, audio_name: str) -> None:
+    mkdir()
     doc = fitz.open(filename)
 
     temp = list(map(lambda x: [x[0], unicodedata.normalize("NFKD", x[1]), x[-1]], doc.getTOC()))
@@ -131,6 +132,7 @@ def process_doc(filename: str, audio_name: str) -> None:
     add_files_to_database(doc, filename)
 
     doc.close()
+    rm()
 
 
 if __name__ == '__main__':
