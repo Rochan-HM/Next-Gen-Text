@@ -7,6 +7,7 @@ $("#add_textbook_button").on("click", function (e) {
     var userID = localStorage.getItem("userid");
     var file = document.querySelector("#file_upload").files[0];
     var voice_name = $("#voice_options :selected").val();
+
     var settings = {
         crossDomain: true,
         url:
@@ -16,11 +17,11 @@ $("#add_textbook_button").on("click", function (e) {
     };
 
     console.log(voice_name);
+
     storageRef.child("temp/temp.pdf").put(file).then((fileUploaded) => {
         $.ajax(settings).done(function (response) {
             console.log(response);
         });
     })
-
 
 });
