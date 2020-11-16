@@ -48,9 +48,7 @@ def create_pdf_and_generate_voice(user_id: str, voice_name: str):
     print(fname)
     flamebase.download_file(fname)
     pdf.set_user_id(user_id)
-    pdf.mkdir()
     pdf.process_doc(fname, voice_name)
-    pdf.rm(fname)
     return "Success"
 
 
